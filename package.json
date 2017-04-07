@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"minty",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "minty",
+    "description": "api documentation for [minty (v0.5.10)](https://www.mintyjs.com) [![npm package](https://img.shields.io/npm/v/npmdoc-minty.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-minty) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-minty.svg)](https://travis-ci.org/npmdoc/node-npmdoc-minty)",
     "devDependencies": {
-        "minty": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "minty": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-minty",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-minty",
+    "keywords": [
+        "documentation",
+        "minty"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_minty.js",
+    "name": "npmdoc-minty",
+    "nameAlias": "npmdoc_minty",
+    "nameOriginal": "npmdoc-minty",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-minty"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
