@@ -1,0 +1,700 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://www.mintyjs.com"
+
+    >minty (v0.5.10)</a>
+</h1>
+<h4>Node process visualization</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.minty">module minty</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.file">
+            function <span class="apidocSignatureSpan">minty.</span>file
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.wrap">
+            function <span class="apidocSignatureSpan">minty.</span>wrap
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.</span>createLineRules</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.</span>parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.</span>run</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.</span>tools</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.minty.createLineRules">module minty.createLineRules</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.createLineRules.addLines">
+            function <span class="apidocSignatureSpan">minty.createLineRules.</span>addLines
+            <span class="apidocSignatureSpan">(type, rule, cluster, lineActivity)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.createLineRules.addScopeName">
+            function <span class="apidocSignatureSpan">minty.createLineRules.</span>addScopeName
+            <span class="apidocSignatureSpan">(cluster, lineActivity)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.createLineRules.addVariables">
+            function <span class="apidocSignatureSpan">minty.createLineRules.</span>addVariables
+            <span class="apidocSignatureSpan">(cluster, lineActivity)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.createLineRules.ruler">
+            function <span class="apidocSignatureSpan">minty.createLineRules.</span>ruler
+            <span class="apidocSignatureSpan">(parsed)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.minty.parser">module minty.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.parser.parser">
+            function <span class="apidocSignatureSpan">minty.</span>parser
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.parser.</span>parseutils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.parser.</span>types</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.minty.run">module minty.run</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.run.runFile">
+            function <span class="apidocSignatureSpan">minty.run.</span>runFile
+            <span class="apidocSignatureSpan">(fileText, absPath, originalText)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.run.wrap">
+            function <span class="apidocSignatureSpan">minty.run.</span>wrap
+            <span class="apidocSignatureSpan">(wrapText, originalText)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.minty.tools">module minty.tools</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.tools.anonFuncCheck">
+            function <span class="apidocSignatureSpan">minty.tools.</span>anonFuncCheck
+            <span class="apidocSignatureSpan">(jsText)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.tools.flattenDeep">
+            function <span class="apidocSignatureSpan">minty.tools.</span>flattenDeep
+            <span class="apidocSignatureSpan">(array)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.minty" id="apidoc.module.minty">module minty</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.minty.file" id="apidoc.element.minty.file">
+        function <span class="apidocSignatureSpan">minty.</span>file
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function file(path) {
+  const JSTEXT = fs.readFileSync(path).toString();
+  const parsed = parser(JSTEXT);
+  const rules = ruler(parsed);
+  const injected = inject(rules, JSTEXT);
+  run.runFile(injected, path, JSTEXT);
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Requires Node.js 4.0 or greater.
+
+## How-To
+
+1. `npm install -g minty` or `npm install --save-dev minty` (don&#x27;t use minty in production!)
+1. `const minty = require (&#x27;minty&#x27;);` in the file you&#x27;d like to analyze
+1. You can execute an entire file by typing `minty.<span class="apidocCodeKeywordSpan">file</span>(//path to file)`. Note, the file
+ path must be absolute, e.g. `minty.file(path.join(__dirname, ../lib/test.js))`
+1. You can also &#x27;mintify&#x27; a function by typing `var newFunc = minty.wrap(initialFunc)`, and then execute it by calling
+ `newFunc()`
+1. Run your code as usual (e.g. `node minty.js`) to generate the minty output. A new minty folder will appear in your root directory
+1. Open the minty.html file in your browser in either the &#x27;file&#x27; or &#x27;function&#x27; folder (depending on whether
+you executed a file, function, or both). Note: data is stored in the mintyVis.js
+1. Click forward and back to step through your variables&#x27; state as your app executes!
+
+## Gotchas
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.minty.wrap" id="apidoc.element.minty.wrap">
+        function <span class="apidocSignatureSpan">minty.</span>wrap
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrap(func) {
+  const JSTEXT = func.toString();
+  const namedJsFunc = anonFunc(JSTEXT);
+  const parsed = parser(namedJsFunc);
+  const rules = ruler(parsed);
+  const injected = inject(rules, namedJsFunc);
+  const mintified = run.wrap(injected, namedJsFunc);
+  return function() {
+    const args = Array.prototype.slice.call(arguments);
+    return mintified.apply(null, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Requires Node.js 4.0 or greater.
+
+## How-To
+
+1. `npm install -g minty` or `npm install --save-dev minty` (don&#x27;t use minty in production!)
+1. `const minty = require (&#x27;minty&#x27;);` in the file you&#x27;d like to analyze
+1. You can execute an entire file by typing `minty.file(//path to file)`. Note, the file path must be absolute, e.g. `minty.file
+(path.join(__dirname, ../lib/test.js))`
+1. You can also &#x27;mintify&#x27; a function by typing `var newFunc = minty.<span class="apidocCodeKeywordSpan">wrap</span>(initialFunc
+)`, and then execute it by calling `newFunc()`
+1. Run your code as usual (e.g. `node minty.js`) to generate the minty output. A new minty folder will appear in your root directory
+1. Open the minty.html file in your browser in either the &#x27;file&#x27; or &#x27;function&#x27; folder (depending on whether
+you executed a file, function, or both). Note: data is stored in the mintyVis.js
+1. Click forward and back to step through your variables&#x27; state as your app executes!
+
+## Gotchas
+
+* If you globally declare a variable without using let, var, or const, we won&#x27;t track it.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.minty.createLineRules" id="apidoc.module.minty.createLineRules">module minty.createLineRules</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.minty.createLineRules.addLines" id="apidoc.element.minty.createLineRules.addLines">
+        function <span class="apidocSignatureSpan">minty.createLineRules.</span>addLines
+        <span class="apidocSignatureSpan">(type, rule, cluster, lineActivity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addLines(type, rule, cluster, lineActivity) {
+  let startLine;
+  let endLine;
+  cluster.forEach(group =&#x3e; {
+    startLine = group.startLine - 1;
+    endLine = group.endLine - 1;
+    if (!lineActivity[startLine]) lineActivity[startLine] = {};
+    if (!lineActivity[startLine].rulesFound) lineActivity[startLine].rulesFound = [];
+    if (rule) {
+      lineActivity[startLine].rulesFound.push({ action: &#x27;START&#x27;, rule, type });
+    }
+    if (!lineActivity[endLine]) lineActivity[endLine] = {};
+    if (!lineActivity[endLine].rulesFound) lineActivity[endLine].rulesFound = [];
+    if (rule) {
+      lineActivity[endLine].rulesFound.push({ action: &#x27;END&#x27;, rule, type });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function ruler(parsed) {
+let lineActivity = {};
+Object.keys(parsed).forEach(type =&#x3e; {
+  switch (type) {
+    case &#x27;BreakStatement&#x27;:
+    case &#x27;ReturnStatement&#x27;:
+    case &#x27;YieldExpression&#x27;:
+      lineRules.<span class="apidocCodeKeywordSpan">addLines</span>(type, &#x27;SWAP&#x27;, parsed[type], lineActivity);
+      break;
+    case &#x27;FunctionDeclaration&#x27;:
+    case &#x27;FunctionExpression&#x27;:
+    case &#x27;ArrowFunctionExpression&#x27;:
+    case &#x27;SwitchCase&#x27;:
+      lineRules.addLines(type, &#x27;SCOPE&#x27;, parsed[type], lineActivity);
+      lineRules.addVariables(parsed[type], lineActivity);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.minty.createLineRules.addScopeName" id="apidoc.element.minty.createLineRules.addScopeName">
+        function <span class="apidocSignatureSpan">minty.createLineRules.</span>addScopeName
+        <span class="apidocSignatureSpan">(cluster, lineActivity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addScopeName(cluster, lineActivity) {
+
+  cluster.forEach(group =&#x3e; {
+    const line = lineActivity[group.startLine - 1];
+    if (group.name) {
+      line.scope = group.name;
+    } else if (group.parameters) {
+      if (line.variables.variables) {
+        line.scope = line.variables.variables.names.join(&#x27;&#x27;);
+      } else {
+        line.scope = &#x27;anonymous function&#x27;;
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  break;
+case &#x27;FunctionDeclaration&#x27;:
+case &#x27;FunctionExpression&#x27;:
+case &#x27;ArrowFunctionExpression&#x27;:
+case &#x27;SwitchCase&#x27;:
+  lineRules.addLines(type, &#x27;SCOPE&#x27;, parsed[type], lineActivity);
+  lineRules.addVariables(parsed[type], lineActivity);
+  lineRules.<span class="apidocCodeKeywordSpan">addScopeName</span>(parsed[type], lineActivity);
+  break;
+case &#x27;VariableDeclaration&#x27;:
+  lineRules.addLines(type, null, parsed[type], lineActivity);
+  lineRules.addVariables(parsed[type], lineActivity);
+  break;
+case &#x27;CallExpression&#x27;:
+case &#x27;SwitchStatement&#x27;:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.minty.createLineRules.addVariables" id="apidoc.element.minty.createLineRules.addVariables">
+        function <span class="apidocSignatureSpan">minty.createLineRules.</span>addVariables
+        <span class="apidocSignatureSpan">(cluster, lineActivity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addVariables(cluster, lineActivity) {
+  cluster.forEach(group =&#x3e; {
+    const line = lineActivity[group.startLine - 1];
+    if (!line.variables) line.variables = {};
+    if (group.parameters) {
+      line.variables.parameters = group.parameters;
+    }
+    if (group.variables) {
+      line.variables.variables = {
+        names: group.variables,
+        kind: group.kind,
+      };
+    }
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  lineRules.addLines(type, &#x27;SWAP&#x27;, parsed[type], lineActivity);
+  break;
+case &#x27;FunctionDeclaration&#x27;:
+case &#x27;FunctionExpression&#x27;:
+case &#x27;ArrowFunctionExpression&#x27;:
+case &#x27;SwitchCase&#x27;:
+  lineRules.addLines(type, &#x27;SCOPE&#x27;, parsed[type], lineActivity);
+  lineRules.<span class="apidocCodeKeywordSpan">addVariables</span>(parsed[type], lineActivity);
+  lineRules.addScopeName(parsed[type], lineActivity);
+  break;
+case &#x27;VariableDeclaration&#x27;:
+  lineRules.addLines(type, null, parsed[type], lineActivity);
+  lineRules.addVariables(parsed[type], lineActivity);
+  break;
+case &#x27;CallExpression&#x27;:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.minty.createLineRules.ruler" id="apidoc.element.minty.createLineRules.ruler">
+        function <span class="apidocSignatureSpan">minty.createLineRules.</span>ruler
+        <span class="apidocSignatureSpan">(parsed)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ruler(parsed) {
+  let lineActivity = {};
+  Object.keys(parsed).forEach(type =&#x3e; {
+    switch (type) {
+      case &#x27;BreakStatement&#x27;:
+      case &#x27;ReturnStatement&#x27;:
+      case &#x27;YieldExpression&#x27;:
+        lineRules.addLines(type, &#x27;SWAP&#x27;, parsed[type], lineActivity);
+        break;
+      case &#x27;FunctionDeclaration&#x27;:
+      case &#x27;FunctionExpression&#x27;:
+      case &#x27;ArrowFunctionExpression&#x27;:
+      case &#x27;SwitchCase&#x27;:
+        lineRules.addLines(type, &#x27;SCOPE&#x27;, parsed[type], lineActivity);
+        lineRules.addVariables(parsed[type], lineActivity);
+        lineRules.addScopeName(parsed[type], lineActivity);
+        break;
+      case &#x27;VariableDeclaration&#x27;:
+        lineRules.addLines(type, null, parsed[type], lineActivity);
+        lineRules.addVariables(parsed[type], lineActivity);
+        break;
+      case &#x27;CallExpression&#x27;:
+      case &#x27;SwitchStatement&#x27;:
+        lineRules.addLines(type, &#x27;VOID&#x27;, parsed[type], lineActivity);
+        break;
+      default:
+        lineRules.addLines(type, &#x27;SCOPE&#x27;, parsed[type], lineActivity);
+        break;
+    }
+  });
+  return lineActivity;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.minty.parser" id="apidoc.module.minty.parser">module minty.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.minty.parser.parser" id="apidoc.element.minty.parser.parser">
+        function <span class="apidocSignatureSpan">minty.</span>parser
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parser(text) {
+  parseutils.cache = {};
+
+  ast = esprima.parse(text, {
+    loc: true,
+  });
+
+  parseutils.asyncTasks.forEach(func =&#x3e; {
+    func();
+  });
+  return parseutils.cache;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.minty.run" id="apidoc.module.minty.run">module minty.run</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.minty.run.runFile" id="apidoc.element.minty.run.runFile">
+        function <span class="apidocSignatureSpan">minty.run.</span>runFile
+        <span class="apidocSignatureSpan">(fileText, absPath, originalText)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runFile(fileText, absPath, originalText) {
+  const fileJS = fileText.log.join(&#x27;\n&#x27;);
+  log = [];
+  filename = absPath.slice(absPath.lastIndexOf(&#x27;/&#x27;) + 1);
+  try {
+    _eval(fileJS, filename, {
+      mintyLog: mintyLog,
+    }, true);
+  } catch (err) {
+    console.log(`\n\n#################################################################################\nMinty has found an error
+! Please check the out put of ${filename} for more details\n#################################################################################\n`);
+    errorHandler(err, fileText);
+  } finally {
+    const output = {
+      entry: filename,
+      log: log,
+    };
+    output[filename] = originalText;
+    const fileOutput = finalizeOutput(output);
+    finalizeRun(fileOutput, &#x27;file&#x27;);
+    console.log(`Minty has finished analyzing ${filename}`);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+**/
+
+function file(path) {
+  const JSTEXT = fs.readFileSync(path).toString();
+  const parsed = parser(JSTEXT);
+  const rules = ruler(parsed);
+  const injected = inject(rules, JSTEXT);
+  run.<span class="apidocCodeKeywordSpan">runFile</span>(injected, path, JSTEXT);
+  return;
+}
+
+/**
+* turns function to a string, turns function into abstract syntax tree, creates rules to inject monitoring code, and returns function
+ that will output HTML file each time it is called
+* @param {function}
+* @returns {function} each time returned function is executed, an HTML visualization will be created
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.minty.run.wrap" id="apidoc.element.minty.run.wrap">
+        function <span class="apidocSignatureSpan">minty.run.</span>wrap
+        <span class="apidocSignatureSpan">(wrapText, originalText)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrap(wrapText, originalText) {
+  let returnStatement;
+  log = [];
+  filename = wrapText.log[1]
+    .split(&#x27;,&#x27;)[2]
+    .replace(/\s+|\]|\&#x27;|\&#x22;/g, &#x27;&#x27;);
+  const wrapJS = wrapText.log.join(&#x27;\n&#x27;);
+  return function() {
+    const args = Array.prototype.slice.call(arguments);
+    try {
+      const fn = eval(`(${wrapJS})`);
+      returnStatement = fn.apply(null, args);
+    } catch (err) {
+      console.log(`\n\n#################################################################################\nMinty has found an error
+! Please check the out put of ${filename} for more details\n#################################################################################\n`);
+      errorHandler(err, wrapText);
+    } finally {
+      const output = {
+        entry: filename,
+        log: log,
+      };
+      output[filename] = originalText;
+      const wrapOutput = finalizeOutput(output);
+      finalizeRun(wrapOutput, &#x27;function&#x27;);
+    }
+    return returnStatement;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Requires Node.js 4.0 or greater.
+
+## How-To
+
+1. `npm install -g minty` or `npm install --save-dev minty` (don&#x27;t use minty in production!)
+1. `const minty = require (&#x27;minty&#x27;);` in the file you&#x27;d like to analyze
+1. You can execute an entire file by typing `minty.file(//path to file)`. Note, the file path must be absolute, e.g. `minty.file
+(path.join(__dirname, ../lib/test.js))`
+1. You can also &#x27;mintify&#x27; a function by typing `var newFunc = minty.<span class="apidocCodeKeywordSpan">wrap</span>(initialFunc
+)`, and then execute it by calling `newFunc()`
+1. Run your code as usual (e.g. `node minty.js`) to generate the minty output. A new minty folder will appear in your root directory
+1. Open the minty.html file in your browser in either the &#x27;file&#x27; or &#x27;function&#x27; folder (depending on whether
+you executed a file, function, or both). Note: data is stored in the mintyVis.js
+1. Click forward and back to step through your variables&#x27; state as your app executes!
+
+## Gotchas
+
+* If you globally declare a variable without using let, var, or const, we won&#x27;t track it.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.minty.tools" id="apidoc.module.minty.tools">module minty.tools</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.minty.tools.anonFuncCheck" id="apidoc.element.minty.tools.anonFuncCheck">
+        function <span class="apidocSignatureSpan">minty.tools.</span>anonFuncCheck
+        <span class="apidocSignatureSpan">(jsText)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function anonFuncCheck(jsText) {
+  if (jsText[9] === &#x27;(&#x27;) {
+    const namedAnonFunc = jsText.replace(jsText[8], &#x27; anonymousFunc&#x27;);
+    return namedAnonFunc;
+  }
+  return jsText;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.minty.tools.flattenDeep" id="apidoc.element.minty.tools.flattenDeep">
+        function <span class="apidocSignatureSpan">minty.tools.</span>flattenDeep
+        <span class="apidocSignatureSpan">(array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flattenDeep(array) {
+  if (array) {
+    let flattenArray = [];
+    for (let i = 0; i &#x3c; array.length; i++) {
+      const element = array[i];
+      if (element.constructor === Array) {
+        flattenArray = flattenArray.concat(flattenDeep(element));
+      } else {
+        flattenArray.push(element);
+      }
+    }
+    return flattenArray;
+  }
+  return undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
