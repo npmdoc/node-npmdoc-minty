@@ -96,6 +96,12 @@
 
         </li>
 
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.</span>viz</span>
+
+        </li>
+
     </ol></li>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.minty.createLineRules">module minty.createLineRules</a><ol>
@@ -207,6 +213,19 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.minty.viz">module minty.viz</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.viz.Viz">
+            function <span class="apidocSignatureSpan">minty.viz.</span>Viz
+            <span class="apidocSignatureSpan">(Ig, Fw)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -291,6 +310,8 @@ you executed a file, function, or both). Note: data is stored in the mintyVis.js
 * If you globally declare a variable without using let, var, or const, we won't track it.
 ...</pre></li>
     </ul>
+
+
 
 
 
@@ -679,6 +700,55 @@ you executed a file, function, or both). Note: data is stored in the mintyVis.js
   }
   return undefined;
 }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.minty.viz" id="apidoc.module.minty.viz">module minty.viz</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.minty.viz.Viz" id="apidoc.element.minty.viz.Viz">
+        function <span class="apidocSignatureSpan">minty.viz.</span>Viz
+        <span class="apidocSignatureSpan">(Ig, Fw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Viz = function (Ig, Fw){function Gn(a){eval.call(Mc,a)}function Kg(a){I.print(a+":\n"+Error().stack);Tb("Assertion: "+a)}function ld(a,
+b){a||Kg("Assertion failed: "+b)}function Hn(a){try{var b=eval("_"+a)}catch(f){try{b=Gw.Module["_"+a]}catch(e){}}ld(b,"Cannot call
+ unknown function "+a+" (perhaps LLVM optimizations or closure removed it?)");return b}function In(a,b,f,e){function n(a,b){if("
+string"==b){if(a===Mc||a===ic||0===a){return 0}k||(k=pa.na());var s=pa.ma(a.length+1);Jn(a,s);return s}return"array"==b?(k||(k=pa
+.na()),s=pa.ma(a.length),Kn(a,s),s):a}var k=0,j=0,e=e?e.map((function(a){return n(a,f[j++])})):[];a=a.apply(Mc,e);"string"==b?b=
+De(a):(ld("array"!=b),b=a);k&amp;&amp;pa.Ha(k);return b}function Lg(s,i,f){f=f||"i8";"*"===f.charAt(f.length-1)&amp;&amp;(f="i32");switch(f){case
+"i1":m[s]=i;break;case"i8":m[s]=i;break;case"i16":D[s&gt;&gt;1]=i;break;case"i32":a[s&gt;&gt;2]=i;break;case"i64":Pf=[i&gt;&gt;&gt;0,Math.min(Math.floor
+(i/4294967296),4294967295)&gt;&gt;&gt;0];a[s&gt;&gt;2]=Pf[0];a[s+4&gt;&gt;2]=Pf[1];break;case"float":vb[s&gt;&gt;2]=i;break;case"double":g[b&gt;&gt;3]=i;a[s&gt;&gt;2]=
+a[b&gt;&gt;2];a[s+4&gt;&gt;2]=a[b+4&gt;&gt;2];break;default:Kg("invalid type for setValue: "+f)}}function Qf(s,i){i=i||"i8";"*"===i.charAt(i.length
+-1)&amp;&amp;(i="i32");switch(i){case"i1":return m[s];case"i8":return m[s];case"i16":return D[s&gt;&gt;1];case"i32":return a[s&gt;&gt;2];case"i64":return
+ a[s&gt;&gt;2];case"float":return vb[s&gt;&gt;2];case"double":return a[b&gt;&gt;2]=a[s&gt;&gt;2],a[b+4&gt;&gt;2]=a[s+4&gt;&gt;2],g[b&gt;&gt;3];default:Kg("invalid type for
+ setValue: "+i)}return Mc}function c(a,b,f,e){var n,k;"number"===typeof a?(n=vc,k=a):(n=Xd,k=a.length);var j="string"===typeof b
+?b:Mc,f=f==d?e:[Hb,pa.ma,pa.oa][f===ic?Ee:f](Math.max(k,j?1:b.length));if(n){return ef(f,0,k),f}if("i8"===j){return E.set(new Uint8Array
+(a),f),f}for(n=0;n&lt;k;){var G=a[n];"function"===typeof G&amp;&amp;(G=pa.md(G));e=j||b[n];0===e?n++:("i64"==e&amp;&amp;(e="i32"),Lg(f+n,G,e),n+=pa
+.ea(e))}return f}function De(a,b){for(var f=new pa.U,e="undefined"==typeof b,n="",k=0,j;;){j=E[a+k|0];if(e&amp;&amp;0==j){break}n+=f.Da(
+j);k+=1;if(!e&amp;&amp;k==b){break}}return n}function $h(a){for(;0&lt;a.length;){var b=a.shift(),f=b.ca;"number"===typeof f?b.W===ic?pa.t("
+v",f):pa.t("vi",f,[b.W]):f(b.W===ic?Mc:b.W)}}function ee(a,b,f){a=(new pa.U).jb(a);f&amp;&amp;(a.length=f);b||a.push(0);return a}function
+ Jn(a,b,f){a=ee(a,f);for(f=0;f&lt;a.length;){m[b+f|0]=a[f],f+=1}}function Kn(a,b){for(var f=0;f&lt;a.length;f++){m[b+f|0]=a[f]}}function
+ Ln(a,b){return 0&lt;=a?a:32&gt;=b?2*Math.abs(1&lt;&lt;b-1)+a:Math.pow(2,b)+a}function Mn(a,b){if(0&gt;=a){return a}var f=32&gt;=b?Math.abs(1&lt;&lt;b-1
+):Math.pow(2,b-1);if(a&gt;=f&amp;&amp;(32&gt;=b||a&gt;f)){a=-2*f+a}return a}function Aj(a){rf++;I.monitorRunDependencies&amp;&amp;I.monitorRunDependencies
+(rf);a?(ld(!Mg[a]),Mg[a]=1,Ng===Mc&amp;&amp;"undefined"!==typeof setInterval&amp;&amp;(Ng=setInterval((function(){var a=Xd,b;for(b in Mg){a||(a=
+vc,I.o("still waiting on run dependencies:")),I.o("dependency: "+b)}a&amp;&amp;I.o("(end of list)")}),6e3))):I.o("warning: run dependency
+ added without ID")}function ai(a){rf--;I.monitorRunDependencies&amp;&amp;I.monitorRunDependencies(rf);a?(ld(Mg[a]),delete Mg[a]):I.o("warning
+: run dependency removed without ID");0==rf&amp;&amp;(Ng!==Mc&amp;&amp;(clearInterval(Ng),Ng=Mc),!Nn&amp;&amp;Bj&amp;&amp;Cj())}function md(a,b,f){for(var e=0;e
+&lt;f;){var n=E[a+e|0],k=E[b+e|0];if(n==k&amp;&amp;0==n){break}if(0==n){return-1}if(0==k){return 1}if(n==k){e++}else{return n&gt;k?1:-1}}return
+ 0}function ea(a,b){return md(a,b,Og)}function ie(a,b,f){for(var a=a|0,b=b|0,f=f|0,e=0,n=0,k=0;(e|0)&lt;(f|0);){n=E[a+e|0];k=E[b+e|
+0];if((n|0)!=(k|0)){return((n|0)&gt;(k|0)?1:-1)|0}e=e+1|0}return 0}function Fc(b,i,f){b|=0;i|=0;f|=0;if((b&amp;3)==(i&amp;3)){for(;b&amp;3;){if
+(0==(f|0)){return}m[b]=m[i];b=b+1|0;i=i+1|0;f=f-1|0}for(;4&lt;=(f|0);){a[b&gt;&gt;2]=a[i&gt;&gt;2],b=b+4|0,i=i+4|0,f=f-4|0}}for(;0&lt;(f|0);){m[b]=
+m[i],b=b+1|0,i=i+1|0,f=f-1|0}}function Wa(a){for(var a=a|0,b=0,b=a;m[b]|0;){b=b+1|0}return b-a|0}function fb(b){fb.d||(fb.d=c([0
+],"i32",Ee));return a[fb.d&gt;&gt;2]=b}function Hw(a,b,f){var e=Q.b[a];if(e){if(e.q){if(0&gt;f){return fb(Cb.i),-1}if(e.object.e){if(e.object
+.m){for(var n=0;n&lt;f;n++){try{e.object.m(m[b+n|0])}catch(k){return fb(Cb.r),-1}}e.object.timestamp=Date.now();return n}fb(Cb.ra);
+return-1}n=e.position;a=Q.b[a];if(!a||a.object.e){fb(Cb.l) ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 

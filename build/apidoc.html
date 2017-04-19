@@ -103,6 +103,12 @@
 
         </li>
 
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">minty.</span>viz</span>
+
+        </li>
+
     </ol></li>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.minty.createLineRules">module minty.createLineRules</a><ol>
@@ -214,6 +220,19 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.minty.viz">module minty.viz</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.minty.viz.Viz">
+            function <span class="apidocSignatureSpan">minty.viz.</span>Viz
+            <span class="apidocSignatureSpan">(Ig, Fw)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -298,6 +317,8 @@ you executed a file, function, or both). Note: data is stored in the mintyVis.js
 * If you globally declare a variable without using let, var, or const, we won&#x27;t track it.
 ...</pre></li>
     </ul>
+
+
 
 
 
@@ -686,6 +707,55 @@ you executed a file, function, or both). Note: data is stored in the mintyVis.js
   }
   return undefined;
 }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.minty.viz" id="apidoc.module.minty.viz">module minty.viz</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.minty.viz.Viz" id="apidoc.element.minty.viz.Viz">
+        function <span class="apidocSignatureSpan">minty.viz.</span>Viz
+        <span class="apidocSignatureSpan">(Ig, Fw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Viz = function (Ig, Fw){function Gn(a){eval.call(Mc,a)}function Kg(a){I.print(a+&#x22;:\n&#x22;+Error().stack);Tb(&#x22;Assertion: &#x22;+a)}function ld(a,
+b){a||Kg(&#x22;Assertion failed: &#x22;+b)}function Hn(a){try{var b=eval(&#x22;_&#x22;+a)}catch(f){try{b=Gw.Module[&#x22;_&#x22;+a]}catch(e){}}ld(b,&#x22;Cannot call
+ unknown function &#x22;+a+&#x22; (perhaps LLVM optimizations or closure removed it?)&#x22;);return b}function In(a,b,f,e){function n(a,b){if(&#x22;
+string&#x22;==b){if(a===Mc||a===ic||0===a){return 0}k||(k=pa.na());var s=pa.ma(a.length+1);Jn(a,s);return s}return&#x22;array&#x22;==b?(k||(k=pa
+.na()),s=pa.ma(a.length),Kn(a,s),s):a}var k=0,j=0,e=e?e.map((function(a){return n(a,f[j++])})):[];a=a.apply(Mc,e);&#x22;string&#x22;==b?b=
+De(a):(ld(&#x22;array&#x22;!=b),b=a);k&#x26;&#x26;pa.Ha(k);return b}function Lg(s,i,f){f=f||&#x22;i8&#x22;;&#x22;*&#x22;===f.charAt(f.length-1)&#x26;&#x26;(f=&#x22;i32&#x22;);switch(f){case
+&#x22;i1&#x22;:m[s]=i;break;case&#x22;i8&#x22;:m[s]=i;break;case&#x22;i16&#x22;:D[s&#x3e;&#x3e;1]=i;break;case&#x22;i32&#x22;:a[s&#x3e;&#x3e;2]=i;break;case&#x22;i64&#x22;:Pf=[i&#x3e;&#x3e;&#x3e;0,Math.min(Math.floor
+(i/4294967296),4294967295)&#x3e;&#x3e;&#x3e;0];a[s&#x3e;&#x3e;2]=Pf[0];a[s+4&#x3e;&#x3e;2]=Pf[1];break;case&#x22;float&#x22;:vb[s&#x3e;&#x3e;2]=i;break;case&#x22;double&#x22;:g[b&#x3e;&#x3e;3]=i;a[s&#x3e;&#x3e;2]=
+a[b&#x3e;&#x3e;2];a[s+4&#x3e;&#x3e;2]=a[b+4&#x3e;&#x3e;2];break;default:Kg(&#x22;invalid type for setValue: &#x22;+f)}}function Qf(s,i){i=i||&#x22;i8&#x22;;&#x22;*&#x22;===i.charAt(i.length
+-1)&#x26;&#x26;(i=&#x22;i32&#x22;);switch(i){case&#x22;i1&#x22;:return m[s];case&#x22;i8&#x22;:return m[s];case&#x22;i16&#x22;:return D[s&#x3e;&#x3e;1];case&#x22;i32&#x22;:return a[s&#x3e;&#x3e;2];case&#x22;i64&#x22;:return
+ a[s&#x3e;&#x3e;2];case&#x22;float&#x22;:return vb[s&#x3e;&#x3e;2];case&#x22;double&#x22;:return a[b&#x3e;&#x3e;2]=a[s&#x3e;&#x3e;2],a[b+4&#x3e;&#x3e;2]=a[s+4&#x3e;&#x3e;2],g[b&#x3e;&#x3e;3];default:Kg(&#x22;invalid type for
+ setValue: &#x22;+i)}return Mc}function c(a,b,f,e){var n,k;&#x22;number&#x22;===typeof a?(n=vc,k=a):(n=Xd,k=a.length);var j=&#x22;string&#x22;===typeof b
+?b:Mc,f=f==d?e:[Hb,pa.ma,pa.oa][f===ic?Ee:f](Math.max(k,j?1:b.length));if(n){return ef(f,0,k),f}if(&#x22;i8&#x22;===j){return E.set(new Uint8Array
+(a),f),f}for(n=0;n&#x3c;k;){var G=a[n];&#x22;function&#x22;===typeof G&#x26;&#x26;(G=pa.md(G));e=j||b[n];0===e?n++:(&#x22;i64&#x22;==e&#x26;&#x26;(e=&#x22;i32&#x22;),Lg(f+n,G,e),n+=pa
+.ea(e))}return f}function De(a,b){for(var f=new pa.U,e=&#x22;undefined&#x22;==typeof b,n=&#x22;&#x22;,k=0,j;;){j=E[a+k|0];if(e&#x26;&#x26;0==j){break}n+=f.Da(
+j);k+=1;if(!e&#x26;&#x26;k==b){break}}return n}function $h(a){for(;0&#x3c;a.length;){var b=a.shift(),f=b.ca;&#x22;number&#x22;===typeof f?b.W===ic?pa.t(&#x22;
+v&#x22;,f):pa.t(&#x22;vi&#x22;,f,[b.W]):f(b.W===ic?Mc:b.W)}}function ee(a,b,f){a=(new pa.U).jb(a);f&#x26;&#x26;(a.length=f);b||a.push(0);return a}function
+ Jn(a,b,f){a=ee(a,f);for(f=0;f&#x3c;a.length;){m[b+f|0]=a[f],f+=1}}function Kn(a,b){for(var f=0;f&#x3c;a.length;f++){m[b+f|0]=a[f]}}function
+ Ln(a,b){return 0&#x3c;=a?a:32&#x3e;=b?2*Math.abs(1&#x3c;&#x3c;b-1)+a:Math.pow(2,b)+a}function Mn(a,b){if(0&#x3e;=a){return a}var f=32&#x3e;=b?Math.abs(1&#x3c;&#x3c;b-1
+):Math.pow(2,b-1);if(a&#x3e;=f&#x26;&#x26;(32&#x3e;=b||a&#x3e;f)){a=-2*f+a}return a}function Aj(a){rf++;I.monitorRunDependencies&#x26;&#x26;I.monitorRunDependencies
+(rf);a?(ld(!Mg[a]),Mg[a]=1,Ng===Mc&#x26;&#x26;&#x22;undefined&#x22;!==typeof setInterval&#x26;&#x26;(Ng=setInterval((function(){var a=Xd,b;for(b in Mg){a||(a=
+vc,I.o(&#x22;still waiting on run dependencies:&#x22;)),I.o(&#x22;dependency: &#x22;+b)}a&#x26;&#x26;I.o(&#x22;(end of list)&#x22;)}),6e3))):I.o(&#x22;warning: run dependency
+ added without ID&#x22;)}function ai(a){rf--;I.monitorRunDependencies&#x26;&#x26;I.monitorRunDependencies(rf);a?(ld(Mg[a]),delete Mg[a]):I.o(&#x22;warning
+: run dependency removed without ID&#x22;);0==rf&#x26;&#x26;(Ng!==Mc&#x26;&#x26;(clearInterval(Ng),Ng=Mc),!Nn&#x26;&#x26;Bj&#x26;&#x26;Cj())}function md(a,b,f){for(var e=0;e
+&#x3c;f;){var n=E[a+e|0],k=E[b+e|0];if(n==k&#x26;&#x26;0==n){break}if(0==n){return-1}if(0==k){return 1}if(n==k){e++}else{return n&#x3e;k?1:-1}}return
+ 0}function ea(a,b){return md(a,b,Og)}function ie(a,b,f){for(var a=a|0,b=b|0,f=f|0,e=0,n=0,k=0;(e|0)&#x3c;(f|0);){n=E[a+e|0];k=E[b+e|
+0];if((n|0)!=(k|0)){return((n|0)&#x3e;(k|0)?1:-1)|0}e=e+1|0}return 0}function Fc(b,i,f){b|=0;i|=0;f|=0;if((b&#x26;3)==(i&#x26;3)){for(;b&#x26;3;){if
+(0==(f|0)){return}m[b]=m[i];b=b+1|0;i=i+1|0;f=f-1|0}for(;4&#x3c;=(f|0);){a[b&#x3e;&#x3e;2]=a[i&#x3e;&#x3e;2],b=b+4|0,i=i+4|0,f=f-4|0}}for(;0&#x3c;(f|0);){m[b]=
+m[i],b=b+1|0,i=i+1|0,f=f-1|0}}function Wa(a){for(var a=a|0,b=0,b=a;m[b]|0;){b=b+1|0}return b-a|0}function fb(b){fb.d||(fb.d=c([0
+],&#x22;i32&#x22;,Ee));return a[fb.d&#x3e;&#x3e;2]=b}function Hw(a,b,f){var e=Q.b[a];if(e){if(e.q){if(0&#x3e;f){return fb(Cb.i),-1}if(e.object.e){if(e.object
+.m){for(var n=0;n&#x3c;f;n++){try{e.object.m(m[b+n|0])}catch(k){return fb(Cb.r),-1}}e.object.timestamp=Date.now();return n}fb(Cb.ra);
+return-1}n=e.position;a=Q.b[a];if(!a||a.object.e){fb(Cb.l) ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
